@@ -1,8 +1,8 @@
-import { authMiddleware } from "@clerk/nextjs";
+import { auth, authMiddleware } from "@clerk/nextjs";
  
 export default authMiddleware({
   // Routes that can be accessed while signed out
-  //publicRoutes: ['/'],
+  publicRoutes: ['/api/webhooks/clerk'],
   // Routes that can always be accessed, and have
   // no authentication information
   //ignoredRoutes: ['/no-auth'],
@@ -14,3 +14,4 @@ export const config = {
   // for more information about configuring your Middleware
   matcher: ["/((?!.+\\.[\\w]+$|_next).*)", "/", "/(api|trpc)(.*)"],
 };
+
