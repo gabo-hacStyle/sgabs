@@ -120,9 +120,9 @@ declare type CreateUserParams = {
   
   declare type TransformationFormProps = {
     action: "Add" | "Update";
-    userId: string;
+    //userId: string;
     type: TransformationTypeKey;
-    creditBalance: number;
+    //creditBalance: number;
     data?: IImage | null;
     config?: Transformations | null;
   };
